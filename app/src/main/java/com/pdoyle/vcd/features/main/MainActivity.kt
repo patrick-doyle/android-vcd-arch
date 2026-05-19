@@ -19,6 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         injectMainScreen()
+        lifecycle.addObserver(coordinator)
 
         enableEdgeToEdge()
         setContent {
