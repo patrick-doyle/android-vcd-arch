@@ -1,0 +1,66 @@
+# ── Gradle ──────────────────────────────────────────────────────────────────
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+build/
+**/build/
+
+# ── Local config (machine-specific, may contain secrets) ────────────────────
+local.properties
+*.local.properties
+
+# ── IntelliJ / Android Studio ───────────────────────────────────────────────
+*.iml
+.idea/
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+!.idea/copyright/
+!.idea/scopes/
+
+# ── Android generated ────────────────────────────────────────────────────────
+gen/
+out/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# ── Keystore / signing (never commit) ────────────────────────────────────────
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+release.properties
+
+# ── NDK ──────────────────────────────────────────────────────────────────────
+*.so
+obj/
+
+# ── Profiling / test artifacts ───────────────────────────────────────────────
+*.hprof
+*.profraw
+*.profdata
+
+# ── OS noise ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ── Secrets / env ────────────────────────────────────────────────────────────
+.env
+.env.*
+secrets.properties
+google-services-private.json
+
+# ── Lint / analysis output ───────────────────────────────────────────────────
+lint-results*
+lint-baseline.xml
+
+# ── Test reports ─────────────────────────────────────────────────────────────
+**/test-results/
+**/reports/
