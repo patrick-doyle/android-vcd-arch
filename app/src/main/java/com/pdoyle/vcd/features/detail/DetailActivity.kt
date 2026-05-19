@@ -1,27 +1,27 @@
-package com.pdoyle.vcd.features.splash
+package com.pdoyle.vcd.features.detail
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.pdoyle.vcd.features.splash.di.injectSplashScreen
+import com.pdoyle.vcd.features.detail.di.injectDetailScreen
 import javax.inject.Inject
 
-class SplashActivity : ComponentActivity() {
+class DetailActivity : ComponentActivity() {
 
     @Inject
-    lateinit var view: SplashScreenView
+    lateinit var view: DetailScreenView
 
     @Inject
-    lateinit var coordinator: SplashScreenCoordinator
+    lateinit var coordinator: DetailScreenCoordinator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        injectSplashScreen()
+        injectDetailScreen()
         lifecycle.addObserver(coordinator)
 
         enableEdgeToEdge()
-        setContent { view.SplashScreen() }
+        setContent { view.DetailScreen() }
     }
 }

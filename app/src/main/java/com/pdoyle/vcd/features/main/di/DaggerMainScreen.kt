@@ -1,6 +1,6 @@
 package com.pdoyle.vcd.features.main.di
 
-import com.pdoyle.vcd.app.VCDApp
+import com.pdoyle.vcd.app.VCDApplication
 import com.pdoyle.vcd.features.main.MainActivity
 import dagger.Subcomponent
 import javax.inject.Scope
@@ -21,7 +21,7 @@ interface MainScreenComponent {
 }
 
 fun MainActivity.injectMainScreen() {
-    VCDApp.component(this)
+    VCDApplication.component(this)
         .mainScreenComponent()
         .create(MainScreenModule(this))
         .inject(this)

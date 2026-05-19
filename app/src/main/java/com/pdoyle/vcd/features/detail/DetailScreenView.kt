@@ -1,20 +1,19 @@
-package com.pdoyle.vcd.features.splash
+package com.pdoyle.vcd.features.detail
 
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.pdoyle.vcd.features.splash.di.SplashScreenScope
+import androidx.compose.material3.Scaffold
+import com.pdoyle.vcd.features.detail.di.DetailScreenScope
 import com.pdoyle.vcd.ui.theme.VCDAppTheme
 import javax.inject.Inject
 
-@SplashScreenScope
-class SplashScreenView @Inject constructor(
-    private val activity: SplashActivity) {
+@DetailScreenScope
+class DetailScreenView @Inject constructor(
+    private val activity: DetailActivity) {
 
     @Composable
-    fun SplashScreen() {
+    fun DetailScreen() {
         VCDAppTheme {
             Scaffold(modifier = Modifier.fillMaxSize()) { _ ->
 

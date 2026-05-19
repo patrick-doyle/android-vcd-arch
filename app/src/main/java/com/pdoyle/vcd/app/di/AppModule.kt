@@ -10,6 +10,5 @@ class AppModule(private val context: Context) {
     @Reusable
     @AppScope
     fun context(): Context = context.applicationContext
-    
-    
+
 }
