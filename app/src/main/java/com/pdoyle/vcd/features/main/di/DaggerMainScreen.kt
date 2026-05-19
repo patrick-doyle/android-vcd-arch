@@ -1,20 +1,28 @@
 package com.pdoyle.vcd.features.main.di
 
+import com.pdoyle.vcd.app.VCDApp
 import com.pdoyle.vcd.features.main.MainActivity
-import dagger.Component
+import dagger.Subcomponent
 import javax.inject.Scope
 
 @Scope
 annotation class MainScreenScope
 
 @MainScreenScope
-@Component(modules = [MainScreenModule::class])
+@Subcomponent(modules = [MainScreenModule::class])
 interface MainScreenComponent {
 
     fun inject(mainActivity: MainActivity)
+
+    @Subcomponent.Factory
+    interface Factory {
+        fun create(module: MainScreenModule): MainScreenComponent
+    }
 }
 
-fun MainActivity.inject() {
-    DaggerMainScreenComponent.builder().mainScreenModule(
-        MainScreenModule(this)).build().inject(this)
+fun MainActivity.injectMainScreen() {
+    VCDApp.component(this)
+        .mainScreenComponent()
+        .create(MainScreenModule(this))
+        .inject(this)
 }
