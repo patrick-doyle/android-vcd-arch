@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.material3.Scaffold
 import com.pdoyle.vcd.features.detail.di.DetailScreenScope
-import com.pdoyle.vcd.ui.theme.VCDAppTheme
+import com.pdoyle.vcd.features.common.theme.VCDAppTheme
 import javax.inject.Inject
 
 @DetailScreenScope

@@ -7,7 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.pdoyle.vcd.features.main.di.MainScreenScope
-import com.pdoyle.vcd.ui.theme.VCDAppTheme
+import com.pdoyle.vcd.features.common.theme.VCDAppTheme
 import javax.inject.Inject
 
 @MainScreenScope

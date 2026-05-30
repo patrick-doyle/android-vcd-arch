@@ -1,6 +1,5 @@
-package com.pdoyle.vcd.ui.theme
+package com.pdoyle.vcd.features.common.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

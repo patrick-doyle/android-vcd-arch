@@ -1,4 +1,4 @@
-package com.pdoyle.vcd.ui.theme
+package com.pdoyle.vcd.features.common.theme
 
 import androidx.compose.ui.graphics.Color
 
